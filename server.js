@@ -10,4 +10,3 @@ app.use(express.static(__dirname + "/demo" ));
 
 
 app.listen(process.env.PORT || 3001);
-console.log('Server online.')
