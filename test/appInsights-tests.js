@@ -55,7 +55,7 @@ describe('Application Insights for Angular JS Provider', function(){
 				return true;
 			}, function(headers){
 				expect(headers['Content-Type']).toEqual('application/json');				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -77,7 +77,7 @@ describe('Application Insights for Angular JS Provider', function(){
 
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -96,7 +96,7 @@ describe('Application Insights for Angular JS Provider', function(){
 
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -116,7 +116,7 @@ describe('Application Insights for Angular JS Provider', function(){
 
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -135,7 +135,7 @@ describe('Application Insights for Angular JS Provider', function(){
 
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 			
@@ -157,7 +157,7 @@ describe('Application Insights for Angular JS Provider', function(){
 				expect(data.data.item.metrics[0].value).toEqual(2345);
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -180,7 +180,7 @@ describe('Application Insights for Angular JS Provider', function(){
 				expect(data.name).toEqual('Microsoft.ApplicationInsights.Exception');
 				return true;
 			}, function(headers){				
-				return headers['Content-Type'] == 'application/json';
+				return headers['Content-Type'] === 'application/json';
 			})
 			.respond(200,'');
 
@@ -189,7 +189,7 @@ describe('Application Insights for Angular JS Provider', function(){
 				// cause an exception
 			   1+z; // jshint ignore:line
 			}
-			catch(e){
+			catch (e){
 				_insights.trackException(e);
 			}
 
